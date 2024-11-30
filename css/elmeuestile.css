@@ -1,0 +1,439 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Maven Pro', sans-serif; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Colocar detrás del contenido */
+    pointer-events: none; /* Permitir interacciones con el contenido */
+}
+
+.footer_texto {
+    text-align: center;
+    color: aliceblue;
+    padding-top: 2px;
+    background-color: #172540;
+    margin-top: auto;
+}
+
+footer { 
+    width: 100%;
+    height: auto;
+    float: left;
+    line-height: 70px;
+    margin-top: auto;   
+}
+
+#caixa {
+    width: 1024px;
+    margin: 0 auto;
+    flex: 1; 
+    box-sizing: border-box; 
+    position: relative;
+    z-index: 1; /* Asegurar que el contenido esté encima del canvas */
+}
+
+header {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    text-align: center;
+    line-height: 150px;
+    color: #172540;
+}
+
+section1 {
+    width: 100%;
+    height: 100%;
+    float: left;
+    border:2px solid #172540;
+}
+
+nav  {
+    width: 20%;
+    height: 1030px;
+    float: left;
+    color: rgb(255, 252, 240);
+    background-color:#172540;
+    padding: 20px 0 20px 20px;
+    font-weight: normal;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: bold;
+    color: #0082E5;
+}
+nav a:active {
+    font-weight: bold;
+    color: #0082E5;
+}
+
+
+section2 {
+    width: 80%;
+    height: 100%;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    border-right:2px solid #172540;
+    overflow:visible;
+}
+
+
+
+#header_superior {
+    height: 170px;
+    background-color: #172540;
+    color: white;
+    text-align: center;
+    position: relative; /* Para posicionar elementos dentro de este contenedor */
+    padding: 20px 0;
+}
+
+#logo {
+    position: absolute;
+    top: 10px; /* Espacio desde la parte superior */
+    left: 10px; /* Espacio desde el borde izquierdo */
+    width: 160px; /* Tamaño del logo, ajustable */
+    height: auto; /* Mantiene la proporción de aspecto */
+}
+
+.logo_thunder{
+    width: 210px ;
+}
+
+#Logo-listat{
+    display: block; /* Asegura que la imagen sea un bloque separado */
+    margin: 0 auto 15px; /* Centra la imagen y agrega margen inferior */
+    max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+h1 {
+    margin: 0;
+    font-size: 50px;
+    font-size: 24px;
+    padding-top: 20px; /* Asegura que el texto no se superponga con el logo */
+}
+
+#glowing-text {
+    font-size: 70px; /* Tamaño de la fuente */
+    color: white;
+    padding-left: 200px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: glow-animation 1.5s ease-in-out infinite alternate;
+    margin: 0; /* Asegúrate de que no haya márgenes que desajusten el título */
+}
+
+
+
+/* Animación de la aurora */
+@keyframes glow-animation {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #00e0ff, 0 0 20px #00e0ff, 0 0 30px #00e0ff, 0 0 40px #00e0ff;
+    }
+    50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #00e0ff, 0 0 30px #00e0ff, 0 0 50px #00e0ff, 0 0 60px #00e0ff;
+    }
+    100% {
+        text-shadow: 0 0 15px #fff, 0 0 30px #00e0ff, 0 0 40px #00e0ff, 0 0 70px #00e0ff, 0 0 80px #00e0ff;
+    }
+}
+
+
+h1.under {
+    text-decoration: underline; 
+    font-family: 'Maven Pro', sans-serif; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    margin: 1;
+    font-size: 62px;
+    padding-top: 1px; /* Asegura que el texto no se superponga con el logo */
+    padding-left: 194px;
+}
+
+#primer_imagen {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+a {
+    text-decoration: none;
+    line-height: 35px;
+    color: rgb(218, 220, 221);
+    font-size: larger;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+
+/* Estilos del botón Ver más */
+.button-container {
+    text-align: center;
+    margin-top: 20px; /* Espacio entre el contenido y el botón */
+}
+
+.ver-mas-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0082E5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.ver-mas-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Contenedor principal */
+    .container {
+    width: 100%;
+    max-width: 800px;
+    height: auto; /* Altura total del contenedor */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilos del artículo */
+article {
+    flex: 1; /* Para que ocupe el 50% del contenedor principal */
+    display: flex;
+    flex-direction: column;
+    background-color: #4177a1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del encabezado */
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Contenido principal */
+.content {
+    display: flex;
+    padding-top: 10px;
+    gap: 20px;
+    flex: 1; /* Para que la sección de contenido llene el resto del artículo */
+}
+
+/* Estilos de las secciones */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    padding:20px;
+    max-width: 100%;
+    border-radius: 30px;
+}
+
+ .text-container {
+    flex: 2;
+    background-color: #97b7d8;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: justify;
+}
+        
+.text-container-listat{
+    background-color: #97b7d8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: justify; 
+}
+
+
+/* Pagina de contactanos*/
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #007BFF;
+}
+
+h3{
+    font-size: 24px;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
+/* Estilos del acordeón */
+.accordion-item {
+    margin-bottom: 20px;
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.accordion-button:focus {
+    outline: none;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px 20px;
+    background-color: #d3d3d3;
+    border: 1px solid #d3d3d3;
+    border-top: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.correos{
+    color: #5445c9;
+}
+.accordion-content.active {
+    display: block;
+}
+
+#currículum{
+    height: auto;
+    width: 100%;
+}
+
+/* Redes sociales */
+.social-media {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social-media  {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Lista de enlaces */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los iconos */
+}
+
+/* Estilo de los enlaces (iconos con imagen de fondo) */
+.social-icon {
+  display: inline-block;
+  width: 60px; /* Tamaño del icono */
+  height: 60px; /* Tamaño del icono */
+  border-radius: 50%; /* Esto hace que los iconos sean redondos */
+  background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Imágenes de fondo para cada red social */
+.social-icon.facebook {
+  background-image: url('../imatges/facebook.png'); /* Logo de Facebook */
+}
+
+.social-icon.twitter {
+  background-image: url('../imatges/x.png'); /* Logo de Twitter (X) */
+}
+
+.social-icon.instagram {
+  background-image: url('../imatges/instagram.png'); /* Logo de Instagram */
+}
+
+.social-icon.telefono {
+    background-image: url(../imatges/telefono.png.jpg);
+}
+
+.social-icon.gmail {
+    background-image: url(../imatges/gmail.jpg);
+}
+/* Efecto hover para los iconos */
+.social-icon:hover {
+  transform: scale(1.1); /* Aumenta el tamaño del icono al pasar el ratón */
+  opacity: 0.8; /* Cambia la opacidad */
+}
+
+.social-links a:hover {
+  background-color: #007BFF; /* Color de fondo al hacer hover */
+  color: #fff; /* Color del texto al hacer hover */
+}
+
+#alerta {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+#alerta:hover {
+    color: darkblue;
+}
+
+
+.vermas{
+    color:rgb(88, 148, 226);
+    font-size: 17px;
+}
